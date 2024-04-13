@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { GoogleLogin, LogoutButton } from "@/components/auth";
+import { GoogleLogin, LogoutButton } from "@/components/custom/auth";
 import { auth } from "@/auth";
 
 export default async function Home() {

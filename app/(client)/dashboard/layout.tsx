@@ -1,0 +1,23 @@
+import React from "react";
+import Navbar from "./_components/navbar";
+import Sidebar from "./_components/sidebar";
+
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+const Layout = ({ children }: LayoutProps) => {
+  return (
+    <div className="h-full">
+      <div className="h-[80px] md:pl-56 fixed inset-y-0 w-full z-50">
+        <Navbar />
+      </div>
+      <div className="hidden md:flex flex-col h-full bg-gray-50 w-56 fixed inset-y-0 z-50">
+        <Sidebar />
+      </div>
+      <main className="md:pl-56 pt-[80px] min-h-full">{children}</main>
+    </div>
+  );
+};
+
+export default Layout;

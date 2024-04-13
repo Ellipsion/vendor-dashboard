@@ -3,8 +3,9 @@
 import { signIn, signOut } from "next-auth/react";
 
 export const GoogleLogin = () => {
-  const handleSignIn = () => {
-    signIn("google");
+  const handleSignIn = async () => {
+    await signIn("google");
+    console.log("success");
   };
   return (
     <button
