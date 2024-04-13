@@ -1,12 +1,21 @@
 import React from "react";
 import Navbar from "./_components/navbar";
 import Sidebar from "./_components/sidebar";
+import { auth } from "@/auth";
+import { redirect } from "next/navigation";
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = async ({ children }: LayoutProps) => {
+  const session = await auth();
+
+  // Protected Route
+  if (!session?.user) {
+    return redirect("/");
+  }
+
   return (
     <div className="h-full">
       <div className="h-[80px] md:pl-56 fixed inset-y-0 w-full z-50">

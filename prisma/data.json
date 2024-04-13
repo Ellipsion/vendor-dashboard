@@ -1,0 +1,175 @@
+[
+  {
+    "vendorName": "Ramesh Textiles",
+    "bankAccountNumber": "123456789012",
+    "bankName": "State Bank of India",
+    "addressLine1": "22 MG Road",
+    "addressLine2": "Near Gandhi Square",
+    "city": "Mumbai",
+    "country": "India",
+    "zipCode": "400001"
+  },
+  {
+    "vendorName": "Sharma Electronics",
+    "bankAccountNumber": "987654321098",
+    "bankName": "ICICI Bank",
+    "addressLine1": "101 Nehru Place",
+    "addressLine2": "Vasant Kunj",
+    "city": "New Delhi",
+    "country": "India",
+    "zipCode": "110070"
+  },
+  {
+    "vendorName": "Patel Pharma Supplies",
+    "bankAccountNumber": "543216789012",
+    "bankName": "HDFC Bank",
+    "addressLine1": "15 Bazaar Street",
+    "city": "Ahmedabad",
+    "country": "India",
+    "zipCode": "380001"
+  },
+  {
+    "vendorName": "Singh IT Solutions",
+    "bankAccountNumber": "1357924680",
+    "bankName": "Axis Bank",
+    "addressLine1": "3/12 Lajpat Nagar",
+    "addressLine2": "Banjara Hills",
+    "city": "Hyderabad",
+    "country": "India",
+    "zipCode": "500034"
+  },
+  {
+    "vendorName": "Gupta Builders",
+    "bankAccountNumber": "8642097531",
+    "bankName": "Kotak Mahindra Bank",
+    "addressLine1": "8 Park Avenue",
+    "addressLine2": "Saket",
+    "city": "New Delhi",
+    "country": "India",
+    "zipCode": "110017"
+  },
+  {
+    "vendorName": "Chowdhury Enterprises",
+    "bankAccountNumber": "2587413690",
+    "bankName": "IDBI Bank",
+    "addressLine1": "67 Cathedral Road",
+    "city": "Chennai",
+    "country": "India",
+    "zipCode": "600001"
+  },
+  {
+    "vendorName": "Khan Consultancy Services",
+    "bankAccountNumber": "3698521470",
+    "bankName": "Canara Bank",
+    "addressLine1": "123 Commercial Street",
+    "addressLine2": "Indiranagar",
+    "city": "Bangalore",
+    "country": "India",
+    "zipCode": "560038"
+  },
+  {
+    "vendorName": "Ahmed Auto Parts",
+    "bankAccountNumber": "9517534682",
+    "bankName": "Bank of Baroda",
+    "addressLine1": "23 Shahid Nagar",
+    "addressLine2": "Sector 17",
+    "city": "Chandigarh",
+    "country": "India",
+    "zipCode": "160017"
+  },
+  {
+    "vendorName": "Rajput Retailers",
+    "bankAccountNumber": "7531902468",
+    "bankName": "Union Bank of India",
+    "addressLine1": "89 Gandhi Road",
+    "city": "Pune",
+    "country": "India",
+    "zipCode": "411001"
+  },
+  {
+    "vendorName": "Verma IT Solutions",
+    "bankAccountNumber": "2468135790",
+    "bankName": "Punjab National Bank",
+    "addressLine1": "15 Main Street",
+    "addressLine2": "Koramangala",
+    "city": "Bangalore",
+    "country": "India",
+    "zipCode": "560095"
+  },
+  {
+    "vendorName": "Gandhi Garments",
+    "bankAccountNumber": "8024671359",
+    "bankName": "Yes Bank",
+    "addressLine1": "7 Clothing Street",
+    "city": "Mumbai",
+    "country": "India",
+    "zipCode": "400001"
+  },
+  {
+    "vendorName": "Chatterjee Enterprises",
+    "bankAccountNumber": "5719346820",
+    "bankName": "IndusInd Bank",
+    "addressLine1": "44 Fabric Lane",
+    "addressLine2": "Koregaon Park",
+    "city": "Pune",
+    "country": "India",
+    "zipCode": "411001"
+  },
+  {
+    "vendorName": "Sen IT Services",
+    "bankAccountNumber": "1238702465",
+    "bankName": "Central Bank of India",
+    "addressLine1": "29 Tech Street",
+    "city": "Chennai",
+    "country": "India",
+    "zipCode": "600001"
+  },
+  {
+    "vendorName": "Das Enterprises",
+    "bankAccountNumber": "9876543210",
+    "bankName": "Standard Chartered Bank",
+    "addressLine1": "1 Digital Road",
+    "addressLine2": "Malad",
+    "city": "Mumbai",
+    "country": "India",
+    "zipCode": "400064"
+  },
+  {
+    "vendorName": "Mishra IT Solutions",
+    "bankAccountNumber": "4561237890",
+    "bankName": "Bank of India",
+    "addressLine1": "72 Silicon Valley",
+    "addressLine2": "Jayanagar",
+    "city": "Bangalore",
+    "country": "India",
+    "zipCode": "560011"
+  },
+  {
+    "vendorName": "Tiwari Textiles",
+    "bankAccountNumber": "3698521470",
+    "bankName": "State Bank of India",
+    "addressLine1": "8 Cloth Market",
+    "city": "Kolkata",
+    "country": "India",
+    "zipCode": "700001"
+  },
+  {
+    "vendorName": "Mitra Builders",
+    "bankAccountNumber": "1592637480",
+    "bankName": "Federal Bank",
+    "addressLine1": "39 Construction Road",
+    "addressLine2": "Andheri",
+    "city": "Mumbai",
+    "country": "India",
+    "zipCode": "400059"
+  },
+  {
+    "vendorName": "Pal IT Solutions",
+    "bankAccountNumber": "9513574682",
+    "bankName": "UCO Bank",
+    "addressLine1": "22 Tech Park",
+    "city": "Kolkata",
+    "country": "India",
+    "zipCode": "700001"
+  }
+]
