@@ -12,6 +12,32 @@ export async function GET(req: Request) {
     }
 }
 
+export async function POST(req: Request) {
+    try {
+        const session = await auth();
+        const data = await req.json();
+        const {vendorName, bankName, bankAccountNumber, addressLine1} = data;
+
+        if (!session?.user) {
+            return new NextResponse("Unauthorized", {status: 401})
+        }
+        
+        if (!(vendorName || bankName || bankAccountNumber || addressLine1)) {
+            return new NextResponse("Missing Fields", {status: 400})
+        }
+
+        const course = await prisma.vendor.create({
+            data
+        })
+
+        return NextResponse.json(course, {status: 201})
+
+    } catch (error) {
+        console.log("/api/courses [POST]", error);
+        return new NextResponse("Internal server error", {status: 500})
+    }
+}
+
 export async function DELETE(req: Request) {
     try {
         const session = await auth();

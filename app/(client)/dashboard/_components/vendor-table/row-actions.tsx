@@ -20,7 +20,7 @@ function RowActions<TData>({ vendor, table }: Props<TData>) {
   const { toast } = useToast();
 
   const handleEdit = () => {
-    router.push(`/dashboard/vendor/${vendor.id}`);
+    router.push(`/dashboard/vendors/${vendor.id}`);
   };
 
   const handleDelete = async () => {
@@ -47,9 +47,7 @@ function RowActions<TData>({ vendor, table }: Props<TData>) {
         onContinue={handleDelete}
         vendorName={vendor.vendorName}
       >
-        <Button variant={"ghost"} size={"sm"}>
-          <Trash size={16} strokeWidth={1} />
-        </Button>
+        <Trash size={16} strokeWidth={1} />
       </DeleteVendorDialog>
     </div>
   );
