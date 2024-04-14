@@ -3,6 +3,7 @@ import Navbar from "./_components/navbar";
 import Sidebar from "./_components/sidebar";
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
+import { Toaster } from "@/components/ui/toaster";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -18,6 +19,7 @@ const Layout = async ({ children }: LayoutProps) => {
 
   return (
     <div className="h-full">
+      <Toaster />
       <div className="h-[80px] md:pl-56 fixed inset-y-0 w-full z-50">
         <Navbar />
       </div>

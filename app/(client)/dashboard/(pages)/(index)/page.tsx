@@ -1,14 +1,13 @@
 import React from "react";
 import { columns } from "../../_components/vendor-table/columns";
 import { DataTable } from "../../_components/vendor-table/data-table";
-import { Vendor } from "@prisma/client";
-import data from "@/prisma/data.json";
+import prisma from "@/prisma/client";
 
 async function Dashboard() {
-  const vendors = data as Vendor[];
+  const data = await prisma.vendor.findMany();
   return (
     <div className="p-5">
-      <DataTable columns={columns} data={vendors} />
+      <DataTable columns={columns} data={data} />
     </div>
   );
 }

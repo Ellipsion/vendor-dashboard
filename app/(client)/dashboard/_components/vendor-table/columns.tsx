@@ -24,8 +24,8 @@ export const columns: ColumnDef<Vendor>[] = [
   },
   {
     id: "actions",
-    cell: ({ row }) => {
-      return <RowActions vendor={row.original} />;
+    cell: ({ row, table }) => {
+      return <RowActions vendor={row.original} table={table} />;
     },
   },
 ];
