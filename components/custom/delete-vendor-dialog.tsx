@@ -25,7 +25,7 @@ const DeleteVendorDialog = ({ children, onContinue, vendorName }: Props) => {
         <AlertDialogHeader>
           <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
           <AlertDialogDescription>
-            This will permanently delete the vendor "{vendorName}".
+            This will permanently delete the vendor &quot;{vendorName}&quot;.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>

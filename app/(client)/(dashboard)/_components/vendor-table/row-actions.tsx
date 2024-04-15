@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import { Table } from "@tanstack/react-table";
 import { deleteVendor } from "./actions";
 import { useToast } from "@/components/ui/use-toast";
-import DeleteVendorDialog from "@/components/custom/vendor-delete-dialog";
+import DeleteVendorDialog from "@/components/custom/delete-vendor-dialog";
 
 interface Props<TData> {
   vendor: Vendor;
