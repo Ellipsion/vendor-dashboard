@@ -1,4 +1,8 @@
-// Add listings to data model
-// member column
-// About me page
+// edit vendor page ;
+// home page 
+// About me page 
 // Github+portfolio links
+// search bar for table
+// dashboard page
+// Add listings to data model
+// member columnhttps://ellipsion-vendor-dashboard.vercel.app

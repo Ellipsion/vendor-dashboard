@@ -3,6 +3,7 @@ import { auth } from "@/auth";
 import { redirect } from "next/navigation";
 import VendorForm from "../_components/vendor-form";
 import prisma from "@/prisma/client";
+import { Button } from "@/components/ui/button";
 
 interface PageProps {
   params: {
@@ -30,13 +31,21 @@ const VendorPage = async ({ params }: PageProps) => {
   }
 
   return (
-    <div className="p-6">
-      <div className="flex items-center justify-between">
-        <div className="flex flex-col gap-y-2">
-          <h1 className="text-2xl font-medium">Vendor</h1>
+    <div className="py-5 pr-6 pl-6 md:pl-1">
+      <div className="flex items-end justify-between py-5">
+        <div>
+          <h1 className="text-3xl font-medium">Vendor</h1>
+          <h5 className="text-sm text-neutral-400 m-1 font-medium">
+            View and Edit a vendor.
+          </h5>
+        </div>
+        <div>
+          <Button variant={"ghost"}>Search</Button>
         </div>
       </div>
-      <VendorForm initialData={vendor} create={false} vendorId={vendor.id} />
+      <div className="bg-white shadow-sm rounded-xl p-6">
+        <VendorForm initialData={vendor} create={false} vendorId={vendor.id} />
+      </div>
     </div>
   );
 };

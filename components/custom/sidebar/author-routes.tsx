@@ -1,35 +1,23 @@
 "use client";
 
-import {
-  BarChart,
-  Compass,
-  Layout,
-  LayoutList,
-  List,
-  Plus,
-} from "lucide-react";
+import { Gem, Github } from "lucide-react";
 import SidebarItem from "./sidebar-item";
 import { usePathname } from "next/navigation";
 
 const dashboardRoutes = [
   {
-    icon: Layout,
-    label: "Dashboard",
-    href: "/dashboard",
+    icon: Github,
+    label: "Github",
+    href: "https://github.com/Ellipsion",
   },
   {
-    icon: LayoutList,
-    label: "Vendors",
-    href: "/vendors",
-  },
-  {
-    icon: Plus,
-    label: "New Vendor",
-    href: "/vendors/create",
+    icon: Gem,
+    label: "Portfolio",
+    href: "https://www.ellipsion.tech/",
   },
 ];
 
-const SidebarRoutes = () => {
+const AuthorRoutes = () => {
   const pathname = usePathname();
   const routes = dashboardRoutes;
   return (
@@ -41,4 +29,4 @@ const SidebarRoutes = () => {
   );
 };
 
-export default SidebarRoutes;
+export default AuthorRoutes;

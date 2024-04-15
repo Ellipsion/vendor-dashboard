@@ -8,12 +8,13 @@ import {
 import { Button } from "../ui/button";
 import { ArrowBigDown, LogOut } from "lucide-react";
 import { LogoutButton } from "./auth";
+import { GoogleLoginIcon } from "./auth";
 
 export const UserProfile = async () => {
   const session = await auth();
 
   if (!session?.user?.image) {
-    return <></>;
+    return <GoogleLoginIcon />;
   }
 
   return (
@@ -37,11 +38,11 @@ export const UserProfile = async () => {
               height={40}
               className="rounded-full cursor-pointer"
             ></Image>
-            <div>
+            <div className="truncate">
               <p className="text-sm font-medium leading-tight">
                 {session.user.name}
               </p>
-              <p className="text-sm font-medium text-muted-foreground">
+              <p className=" text-xs font-medium text-muted-foreground truncate">
                 {session.user.email}
               </p>
             </div>

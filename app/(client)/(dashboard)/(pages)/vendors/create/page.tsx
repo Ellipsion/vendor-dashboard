@@ -1,39 +1,19 @@
-"use client";
-
-import * as z from "zod";
-// import axios from "axios";
-import Link from "next/link";
-// import toast from "react-hot-toast";
-import { useRouter } from "next/navigation";
-import { Button } from "@/components/ui/button";
-
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { useForm } from "react-hook-form";
-import { Input } from "@/components/ui/input";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { IconBadge } from "@/components/custom/icon-badge";
-import { LayoutDashboard } from "lucide-react";
 import VendorForm from "../_components/vendor-form";
 
 const CreateVendorPage = () => {
   return (
-    <div className="p-6">
-      <div className="flex items-center justify-between">
-        <div className="flex flex-col gap-y-2">
-          <h1 className="text-2xl font-medium">Add Vendor</h1>
-          <span>Complete all fields</span>
+    <div className="py-5 pr-6 pl-6 md:pl-1">
+      <div className="flex items-end justify-between py-5">
+        <div>
+          <h1 className="text-3xl font-medium">Vendor</h1>
+          <h5 className="text-sm text-neutral-400 m-1 font-medium">
+            Add new vendor
+          </h5>
         </div>
       </div>
-
-      <VendorForm create={true} />
+      <div className="bg-white shadow-sm rounded-xl p-6">
+        <VendorForm create={true} />
+      </div>
     </div>
   );
 };

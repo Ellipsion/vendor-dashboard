@@ -3,6 +3,7 @@
 import { LogOut } from "lucide-react";
 import { signIn, signOut } from "next-auth/react";
 import { Button } from "../ui/button";
+import Image from "next/image";
 
 export const GoogleLogin = () => {
   const handleSignIn = async () => {
@@ -10,13 +11,32 @@ export const GoogleLogin = () => {
     console.log("success");
   };
   return (
-    <button
-      // className="flex w-full justify-center mb-5 items-center gap-2 py-3 px-6 rounded-md font-bold text-2xl text-gray-400 bg-slate-900"
-      className="flex w-full justify-center mb-5 items-center gap-2 py-3 px-6 rounded-md font-bold text-2xl text-gray-900 bg-slate-500"
-      onClick={handleSignIn}
-    >
-      <span className="text-sm">Login with Google</span> <span>🔥</span>
-    </button>
+    <Button variant={"outline"} onClick={handleSignIn}>
+      <span className="text-sm mx-2">Login with Google</span>{" "}
+      <Image
+        width={20}
+        height={20}
+        alt="google logo"
+        src={"/google-icon-logo.svg"}
+      ></Image>
+    </Button>
+  );
+};
+
+export const GoogleLoginIcon = () => {
+  const handleSignIn = async () => {
+    await signIn("google");
+  };
+  return (
+    <Button variant={"ghost"} size={"icon"} onClick={handleSignIn}>
+      <Image
+        alt="profile image"
+        src={"/google-icon-logo.svg"}
+        width={20}
+        height={20}
+        className="rounded-full cursor-pointer"
+      ></Image>
+    </Button>
   );
 };
 
