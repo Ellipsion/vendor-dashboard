@@ -1,6 +1,8 @@
 "use client";
 
+import { LogOut } from "lucide-react";
 import { signIn, signOut } from "next-auth/react";
+import { Button } from "../ui/button";
 
 export const GoogleLogin = () => {
   const handleSignIn = async () => {
@@ -20,12 +22,12 @@ export const GoogleLogin = () => {
 
 export const LogoutButton = () => {
   return (
-    <button
-      className="flex items-center gap-2 py-3 px-6 rounded-md font-bold text-2xl text-gray-400 bg-slate-900"
+    <Button
+      className="text-muted-foreground"
       onClick={() => signOut()}
+      variant={"ghost"}
     >
-      {" "}
-      <span className="text-sm">Logout</span> <span>😀</span>
-    </button>
+      Logout <LogOut size={15} className="stroke-muted-foreground mx-2" />
+    </Button>
   );
 };

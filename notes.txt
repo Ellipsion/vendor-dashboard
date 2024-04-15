@@ -1,2 +1,4 @@
 // Add listings to data model
 // member column
+// About me page
+// Github+portfolio links

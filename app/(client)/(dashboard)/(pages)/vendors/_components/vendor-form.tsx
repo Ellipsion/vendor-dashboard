@@ -37,9 +37,9 @@ const formSchema = z.object({
 });
 
 interface VendorFormProps {
-  initialData: Vendor;
+  initialData?: Vendor;
   create: boolean;
-  vendorId: string;
+  vendorId?: string;
 }
 
 const VendorForm = ({ initialData, create, vendorId }: VendorFormProps) => {
@@ -51,14 +51,14 @@ const VendorForm = ({ initialData, create, vendorId }: VendorFormProps) => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      vendorName: initialData.vendorName,
-      bankName: initialData.bankName,
-      bankAccountNumber: initialData.bankAccountNumber,
-      addressLine1: initialData.addressLine1,
-      addressLine2: initialData.addressLine2 || "",
-      city: initialData.city || "",
-      country: initialData.country || "",
-      zipCode: initialData.zipCode || "",
+      vendorName: initialData?.vendorName || "",
+      bankName: initialData?.bankName || "",
+      bankAccountNumber: initialData?.bankAccountNumber || "",
+      addressLine1: initialData?.addressLine1 || "",
+      addressLine2: initialData?.addressLine2 || "",
+      city: initialData?.city || "",
+      country: initialData?.country || "",
+      zipCode: initialData?.zipCode || "",
     },
   });
 
@@ -109,25 +109,26 @@ const VendorForm = ({ initialData, create, vendorId }: VendorFormProps) => {
                 <IconBadge icon={LayoutDashboard} />
                 <h1 className="text-xl">Basic Details</h1>
               </div>
-              {isEditing ? (
-                <Button
-                  type="button"
-                  onClick={toggleEditMode}
-                  variant={"destructive"}
-                  size={"sm"}
-                >
-                  Cancel
-                </Button>
-              ) : (
-                <Button
-                  type="button"
-                  onClick={toggleEditMode}
-                  variant={"secondary"}
-                  size={"sm"}
-                >
-                  Edit Vendor
-                </Button>
-              )}
+              {!create &&
+                (isEditing ? (
+                  <Button
+                    type="button"
+                    onClick={toggleEditMode}
+                    variant={"destructive"}
+                    size={"sm"}
+                  >
+                    Cancel
+                  </Button>
+                ) : (
+                  <Button
+                    type="button"
+                    onClick={toggleEditMode}
+                    variant={"secondary"}
+                    size={"sm"}
+                  >
+                    Edit Vendor
+                  </Button>
+                ))}
             </div>
             <div className="mt-6 border bg-slate-100 rounded-md">
               <FormInput
@@ -221,7 +222,7 @@ const VendorForm = ({ initialData, create, vendorId }: VendorFormProps) => {
                 size="sm"
                 disabled={!isValid || isSubmitting}
               >
-                {create ? "Save" : "Update"}
+                {create ? "Add" : "Update"}
               </Button>
             )}
           </div>

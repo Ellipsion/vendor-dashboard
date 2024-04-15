@@ -40,14 +40,14 @@ function RowActions<TData>({ vendor, table }: Props<TData>) {
   };
   return (
     <div className="flex gap-5 w-10">
-      <Button onClick={handleEdit} variant={"default"} size={"sm"}>
+      <Button onClick={handleEdit} variant={"link"} size={"sm"}>
         <PenIcon size={16} strokeWidth={2} />
       </Button>
       <DeleteVendorDialog
         onContinue={handleDelete}
         vendorName={vendor.vendorName}
       >
-        <Trash size={16} strokeWidth={1} />
+        <Trash className="" size={16} strokeWidth={1} />
       </DeleteVendorDialog>
     </div>
   );

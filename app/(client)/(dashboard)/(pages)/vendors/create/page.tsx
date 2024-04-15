@@ -33,7 +33,7 @@ const CreateVendorPage = () => {
         </div>
       </div>
 
-      <VendorForm />
+      <VendorForm create={true} />
     </div>
   );
 };

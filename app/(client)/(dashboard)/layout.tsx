@@ -18,15 +18,15 @@ const Layout = async ({ children }: LayoutProps) => {
   }
 
   return (
-    <div className="h-full">
+    <div className="h-full xl:w-[80%] mx-auto">
       <Toaster />
-      <div className="h-[60px] md:pl-56 fixed inset-y-0 w-full z-50">
+      <div className="h-16 md:pl-72 fixed inset-y-0 w-full xl:w-[80%] z-50">
         <Navbar />
       </div>
-      <div className="hidden md:flex flex-col h-full bg-gray-50 w-56 fixed inset-y-0 z-50">
+      <div className="hidden md:flex flex-col h-full justify-center  w-72 fixed inset-y-0 z-50">
         <Sidebar />
       </div>
-      <main className="md:pl-56 pt-[80px] min-h-full">{children}</main>
+      <main className="md:pl-72 pt-20 min-h-full">{children}</main>
     </div>
   );
 };
