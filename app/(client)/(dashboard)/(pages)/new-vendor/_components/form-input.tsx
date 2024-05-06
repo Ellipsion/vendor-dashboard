@@ -32,12 +32,7 @@ const FormInput = ({ form, label, placeholder, name }: FormInputProps) => {
             <p className="text-xs font-medium mb-2">{label}</p>
           </FormLabel>
           <FormControl>
-            <Input
-              disabled={false}
-              className="w-full"
-              placeholder={placeholder}
-              {...field}
-            />
+            <Input className="w-full" placeholder={placeholder} {...field} />
           </FormControl>
           <FormMessage className="text-xs font-normal" />
         </FormItem>

@@ -21,10 +21,10 @@ const Layout = async ({ children }: LayoutProps) => {
       <div className="h-16 fixed inset-y-0 w-full xl:w-[80%] z-50">
         <Navbar />
       </div>
-      <div className="hidden md:flex flex-col h-full justify-center  w-72 fixed inset-y-0 z-40">
+      <div className="hidden md:flex flex-col h-full justify-center w-64 xl:w-72 fixed inset-y-0 z-40">
         <Sidebar />
       </div>
-      <main className="md:pl-72 pt-20 min-h-full">{children}</main>
+      <main className="md:pl-64 xl:pl-72 pt-20 min-h-full">{children}</main>
     </div>
   );
 };

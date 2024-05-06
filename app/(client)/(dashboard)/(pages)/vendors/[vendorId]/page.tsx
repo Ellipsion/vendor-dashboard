@@ -1,9 +1,8 @@
 import React from "react";
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
-import VendorForm from "../_components/vendor-form";
 import prisma from "@/prisma/client";
-import { Button } from "@/components/ui/button";
+import EditVendorForm from "../_components/edit-vendor-form";
 
 interface PageProps {
   params: {
@@ -31,20 +30,23 @@ const VendorPage = async ({ params }: PageProps) => {
   }
 
   return (
-    <div className="py-5 pr-6 pl-6 md:pl-1">
+    <div className="py-5 md:pr-6 pl-4 pr-4 md:pl-1">
       <div className="flex items-end justify-between py-5">
         <div>
-          <h1 className="text-3xl font-medium">Vendor</h1>
-          <h5 className="text-sm text-neutral-400 m-1 font-medium">
-            View and Edit a vendor.
-          </h5>
-        </div>
-        <div>
-          <Button variant={"ghost"}>Search</Button>
+          <h1 className="text-3xl font-medium">Edit Vendor</h1>
         </div>
       </div>
-      <div className="bg-white shadow-sm rounded-xl p-6">
-        <VendorForm initialData={vendor} create={false} vendorId={vendor.id} />
+      <div className="bg-white shadow-sm rounded-lg p-7 max-w-xl">
+        <div>
+          <h2 className="text-xl font-medium">{vendor.vendorName}</h2>
+          <p className="text-xs text-gray-400 tracking-wide mt-2">
+            {vendor.city} ({vendor.country})
+          </p>
+        </div>
+        <div className="mt-8 relative">
+          {/* <VendorCard /> */}
+          <EditVendorForm initialData={vendor} vendorId={vendor.id} />
+        </div>
       </div>
     </div>
   );

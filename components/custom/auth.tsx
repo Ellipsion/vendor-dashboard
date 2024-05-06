@@ -7,8 +7,7 @@ import Image from "next/image";
 
 export const GoogleLogin = () => {
   const handleSignIn = async () => {
-    await signIn("google");
-    console.log("success");
+    await signIn("google", { callbackUrl: "/dashboard" });
   };
   return (
     <Button variant={"outline"} onClick={handleSignIn}>

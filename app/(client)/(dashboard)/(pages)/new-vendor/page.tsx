@@ -1,6 +1,9 @@
-import VendorForm from "../_components/create-vendor-form";
+import { Input } from "@/components/custom/input";
+import React from "react";
+import FormInput from "./_components/form-input";
+import VendorForm from "./_components/vendor-form";
 
-const CreateVendorPage = () => {
+const VendorPage = () => {
   return (
     <div className="py-5 md:pr-6 pl-4 pr-4 md:pl-1">
       <div className="flex items-end justify-between py-5">
@@ -16,11 +19,11 @@ const CreateVendorPage = () => {
           </p>
         </div>
         <div className="mt-8">
-          <VendorForm />
+          <VendorForm create={true} />
         </div>
       </div>
     </div>
   );
 };
 
-export default CreateVendorPage;
+export default VendorPage;

@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div className="m-5 md:my-6 md:mr-6 md:ml-1 p-4 h-full flex items-center bg-white/80 backdrop-blur-sm shadow-sm rounded-2xl">
+    <div className="m-5 md:m-6 p-4 h-full flex items-center bg-white/80 backdrop-blur-sm shadow-sm rounded-2xl">
       <div className="flex w-full items-center justify-between">
         <MobileSidebar />
         <div className="hidden md:block">
