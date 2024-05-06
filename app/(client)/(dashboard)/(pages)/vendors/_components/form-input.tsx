@@ -19,9 +19,16 @@ interface FormInputProps {
   label?: string;
   placeholder: string;
   name: string;
+  disabled: boolean;
 }
 
-const FormInput = ({ form, label, placeholder, name }: FormInputProps) => {
+const FormInput = ({
+  form,
+  label,
+  placeholder,
+  name,
+  disabled,
+}: FormInputProps) => {
   return (
     <FormField
       control={form.control}
@@ -33,7 +40,7 @@ const FormInput = ({ form, label, placeholder, name }: FormInputProps) => {
           </FormLabel>
           <FormControl>
             <Input
-              disabled={false}
+              disabled={disabled}
               className="w-full"
               placeholder={placeholder}
               {...field}

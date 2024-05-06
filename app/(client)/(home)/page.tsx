@@ -1,8 +1,5 @@
-import Image from "next/image";
-import { GoogleLogin, LogoutButton } from "@/components/custom/auth";
+import { GoogleLogin } from "@/components/custom/auth";
 import { auth } from "@/auth";
-import Navbar from "@/components/custom/navbar";
-import Logo from "@/components/custom/sidebar/logo";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Footer from "@/components/custom/footer";

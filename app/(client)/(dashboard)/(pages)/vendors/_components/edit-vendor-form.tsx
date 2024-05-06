@@ -79,6 +79,10 @@ const EditVendorForm = ({ initialData, vendorId }: VendorFormProps) => {
     }
   };
 
+  const handleEdit = () => {
+    toggleEditMode();
+  };
+
   const handleCancel = () => {
     toggleEditMode();
     router.refresh();
@@ -118,7 +122,7 @@ const EditVendorForm = ({ initialData, vendorId }: VendorFormProps) => {
                 className="rounded-full shadow hover:pb-1 transition-all"
                 size={"icon"}
                 variant={"default"}
-                onClick={toggleEditMode}
+                onClick={handleEdit}
               >
                 <Pencil size={18} />
               </Button>
@@ -152,6 +156,7 @@ const EditVendorForm = ({ initialData, vendorId }: VendorFormProps) => {
                 label="Name"
                 placeholder="Enter Vendor Name"
                 name="vendorName"
+                disabled={!isEditing}
               />
               <div className="flex flex-col md:flex-row gap-y-6 gap-x-4">
                 <FormInput
@@ -159,12 +164,14 @@ const EditVendorForm = ({ initialData, vendorId }: VendorFormProps) => {
                   label="Bank"
                   placeholder="Enter Bank Name"
                   name="bankName"
+                  disabled={!isEditing}
                 />
                 <FormInput
                   form={form}
                   label="Account Number"
                   placeholder="Enter Bank Account Number"
                   name="bankAccountNumber"
+                  disabled={!isEditing}
                 />
               </div>
               <FormInput
@@ -172,12 +179,14 @@ const EditVendorForm = ({ initialData, vendorId }: VendorFormProps) => {
                 label="Address Line 1"
                 placeholder="Street Address"
                 name="addressLine1"
+                disabled={!isEditing}
               />
               <FormInput
                 form={form}
                 label="Address Line 2 (optional)"
                 placeholder="Landmark..."
                 name="addressLine2"
+                disabled={!isEditing}
               />
               <div className="flex space-x-4">
                 <FormInput
@@ -185,18 +194,21 @@ const EditVendorForm = ({ initialData, vendorId }: VendorFormProps) => {
                   label="City"
                   placeholder="Enter City Name"
                   name="city"
+                  disabled={!isEditing}
                 />
                 <FormInput
                   form={form}
                   label="Country"
                   placeholder="Select Country"
                   name="country"
+                  disabled={!isEditing}
                 />
                 <FormInput
                   form={form}
                   label="Zip Code"
                   placeholder="Enter Zip Code"
                   name="zipCode"
+                  disabled={!isEditing}
                 />
               </div>
             </div>
