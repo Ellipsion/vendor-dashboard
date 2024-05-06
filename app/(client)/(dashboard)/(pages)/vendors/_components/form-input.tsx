@@ -19,7 +19,7 @@ interface FormInputProps {
   label?: string;
   placeholder: string;
   name: string;
-  disabled: boolean;
+  disabled?: boolean;
 }
 
 const FormInput = ({
