@@ -21,9 +21,8 @@ export default async function Home() {
             <Button variant={"outline"}>Dashboard</Button>
           </Link>
         ) : (
-          <></>
+          <GoogleLogin />
         )}
-        <GoogleLogin />
       </div>
       <Footer />
     </div>
