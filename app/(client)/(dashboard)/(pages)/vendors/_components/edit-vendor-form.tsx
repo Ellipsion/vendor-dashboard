@@ -137,6 +137,7 @@ const EditVendorForm = ({ initialData, vendorId }: VendorFormProps) => {
             className="rounded-full shadow group  hover:pb-1 transition-all bg-white"
             size={"icon"}
             variant={"ghost"}
+            onClick={handleDelete}
           >
             <Trash size={18} className="group-hover:stroke-rose-600" />
           </Button>
